@@ -1,0 +1,287 @@
+:root {
+    --accent-color: rgba(247, 77, 101, 0.9);
+    --red-dark: #B72027;
+    --orange-medium: #EE7703;
+    --blue-dark: #024b61;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    display: flex;
+    margin-inline: 0;
+    margin-block: 0;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    background-color: var(--blue-dark);
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+h1 {
+    margin-block-end: 0;
+}
+
+h2 {
+    margin-block-end: 0.75rem;
+}
+
+input,
+select,
+textarea {
+    font-family: 'Montserrat', sans-serif;
+}
+
+aside {
+    position: relative;
+    width: 0;
+    z-index: 10;
+}
+
+aside img {
+    inline-size: 2rem;
+    margin-inline: .5rem;
+    margin-block: .5rem;
+}
+
+
+aside nav {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    background-color: var(--red-dark);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    left: -15rem;
+    transition: all 0.5s;
+    width: 15rem;
+    height: 100%;
+}
+
+aside:hover nav {
+    left: 0;
+}
+
+.menu-svg:hover+nav {
+    left: 0;
+}
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-inline: .5rem;
+    margin-block: 0.5rem;
+    line-height: 1.5rem;
+    list-style: none;
+    flex-basis: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    padding-block: 0;
+    margin-block: 0;
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem;
+    row-gap: 10px;
+}
+
+main>* {
+    grid-column: 2;
+}
+
+.wellcome-section {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    background: var(--blue-dark);
+}
+
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    animation: moveUp 2s ease-in-out;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.wave-1 {
+    animation: moveWave1 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+    from {
+        transform: translateX(-2000px);
+    }
+}
+
+.wave-2 {
+    animation: moveWave2 3s 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave2 {
+    from {
+        transform: translateX(-1800px);
+    }
+}
+
+.wave-3 {
+    animation: moveWave3 3s 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave3 {
+    from {
+        transform: translateX(-1600px);
+    }
+}
+
+.boat {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatBoat 7s ease-in-out infinite alternate;
+    z-index: 3;
+    inline-size: 5rem;
+}
+
+@keyframes floatBoat {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(0) translateY(-20px);
+    }
+}
+
+.social_logo {
+    inline-size: 1rem;
+}
+
+.full-bleed {
+    grid-column: 1 / span 3;
+    padding-inline: 2rem;
+}
+
+#bountys {
+    background-color: black;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+#bountys h2 {
+    color: white;
+}
+
+#bountys footer {
+    text-align: center;
+}
+
+#bountys footer button {
+    padding: 1rem;
+    border: none;
+    color: white;
+    background: var(--red-dark);
+    margin-block: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+#bountys footer button:visited,
+#bountys footer button:hover {
+    color: white;
+    background: red;
+    transition: all 0.2s;
+    -webkit-box-shadow: -19px 20px 71px -16px rgba(255, 173, 173, 1);
+    -moz-box-shadow: -19px 20px 71px -16px rgba(255, 173, 173, 1);
+    box-shadow: -19px 20px 71px -16px rgba(255, 173, 173, 1);
+}
+
+.carousel-container {
+    width: 25vw;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 40%;
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow-left {
+    left: 20%;
+}
+
+.arrow-right {
+    right: 20%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.bounty {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.bounty:hover {
+    transform: rotateY(20deg) scale(1.2);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
