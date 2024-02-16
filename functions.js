@@ -40,7 +40,7 @@ export const AjustBoatPosition = (boat) => {
     boat.style.opacity = 0
     setTimeout(() => {
         boat.style.opacity = 1
-        boat.style.bottom = "25%"
+        boat.style.bottom = "30%"
     }, 2000)
 }
 
