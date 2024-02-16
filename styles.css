@@ -3,6 +3,8 @@
     --red-dark: #B72027;
     --orange-medium: #EE7703;
     --blue-dark: #024b61;
+    --blue-darker: #02248a;
+    --gray: #424242;
 }
 
 * {
@@ -16,7 +18,7 @@ body {
     margin-block: 0;
     font-family: 'Montserrat', sans-serif;
     position: relative;
-    background-color: var(--blue-dark);
+    background-color: var(--blue-darker);
     overflow-x: hidden;
 }
 
@@ -33,8 +35,31 @@ h1 {
     margin-block-end: 0;
 }
 
-h2 {
-    margin-block-end: 0.75rem;
+#title {
+    inline-size: 40rem;
+    animation: inittitle 2s ease-in-out;
+}
+
+@keyframes inittitle {
+    0% {
+        inline-size: 80rem;
+    }
+
+    100% {
+        inline-size: 40rem;
+    }
+}
+
+#subtitle {
+    font-size: 5rem;
+    font-family: 'parabolaregular', Arial, sans-serif;
+    margin-block-start: -1.5rem;
+    color: var(--orange-medium);
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 input,
@@ -120,7 +145,8 @@ main>* {
     align-items: center;
     flex-direction: column;
     padding-top: 5rem;
-    background: var(--blue-dark);
+    background: rgb(187, 204, 255);
+    background: linear-gradient(0deg, rgba(187, 204, 255, 1) 27%, rgb(224, 231, 248) 100%);
 }
 
 
@@ -147,6 +173,7 @@ main>* {
 
 .wave-1 {
     animation: moveWave1 3s ease-in-out infinite alternate;
+    fill: #8ba8ff;
 }
 
 @keyframes moveWave1 {
@@ -157,6 +184,7 @@ main>* {
 
 .wave-2 {
     animation: moveWave2 3s 1.2s ease-in-out infinite alternate;
+    fill: #507cff;
 }
 
 @keyframes moveWave2 {
@@ -167,6 +195,7 @@ main>* {
 
 .wave-3 {
     animation: moveWave3 3s 0.7s ease-in-out infinite alternate;
+    fill: #02248a;
 }
 
 @keyframes moveWave3 {
@@ -175,14 +204,15 @@ main>* {
     }
 }
 
-.boat {
+#boat {
     position: absolute;
-    bottom: 35%;
     left: 50%;
+    opacity: 0;
     transform: translateX(-50%);
     animation: floatBoat 7s ease-in-out infinite alternate;
-    z-index: 3;
-    inline-size: 5rem;
+    inline-size: 10rem;
+    transition: all 5s;
+    z-index: 2;
 }
 
 @keyframes floatBoat {
@@ -207,7 +237,7 @@ main>* {
 }
 
 #bountys {
-    background-color: black;
+    /* background-color: black; */
     width: 100vw;
     color: white;
     display: flex;
@@ -216,6 +246,8 @@ main>* {
     text-align: center;
     align-items: center;
     position: relative;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(2,36,138,1) 50% , rgba(2,36,138,1) 100%);
 }
 
 #bountys h2 {
@@ -257,19 +289,27 @@ main>* {
     font-size: 5rem;
     cursor: pointer;
     z-index: 1;
+    fill: var(--orange-medium);
+    inline-size: 7rem;
+    transition: all 0.2s;
+}
+
+.arrow:hover {
+    inline-size: 7.5rem;
 }
 
 .arrow-left {
-    left: 20%;
+    left: 10%;
 }
 
 .arrow-right {
-    right: 20%;
+    right: 10%;
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+
 }
 
 .bounty {
@@ -284,4 +324,25 @@ main>* {
     perspective: 1000px;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
+}
+
+#bountys footer{
+    width: 40%;   
+    height: 60vh;
+    overflow-y: scroll;
+    text-align: left;
+
+}
+
+#bountys footer h2{
+    font-size: 2rem;
+    font-family: 'parabolaregular', Arial, sans-serif;
+    background-color: none;
+}
+
+main > footer{
+    width: 100%;
+    transition: all 0.2s;
+    background-color: var(--gray);
+    height: 5rem;
 }
