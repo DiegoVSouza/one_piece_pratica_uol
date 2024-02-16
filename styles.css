@@ -300,6 +300,7 @@ main>* {
 
 .arrow-left {
     left: 10%;
+    transform: rotateY(180deg) ;
 }
 
 .arrow-right {
