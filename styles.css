@@ -36,7 +36,7 @@ h1 {
 }
 
 #title {
-    inline-size: 40rem;
+    inline-size: 35rem;
     animation: inittitle 2s ease-in-out;
 }
 
@@ -46,14 +46,14 @@ h1 {
     }
 
     100% {
-        inline-size: 40rem;
+        inline-size: 35rem;
     }
 }
 
 #subtitle {
     font-size: 5rem;
     font-family: 'parabolaregular', Arial, sans-serif;
-    margin-block-start: -1.5rem;
+    margin-block-start: -0.5rem;
     color: var(--orange-medium);
     text-shadow:
         -1px -1px 0 #000,
@@ -156,7 +156,7 @@ main>* {
     left: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     transform: translateY(0);
     animation: moveUp 2s ease-in-out;
 }
@@ -195,7 +195,8 @@ main>* {
 
 .wave-3 {
     animation: moveWave3 3s 0.7s ease-in-out infinite alternate;
-    fill: #02248a;
+    fill: hsl(225, 97%, 27%);
+    z-index: 5;
 }
 
 @keyframes moveWave3 {
@@ -207,12 +208,13 @@ main>* {
 #boat {
     position: absolute;
     left: 50%;
+    top: 50%;
     opacity: 0;
     transform: translateX(-50%);
     animation: floatBoat 7s ease-in-out infinite alternate;
     inline-size: 10rem;
     transition: all 5s;
-    z-index: 2;
+    z-index: 1;
 }
 
 @keyframes floatBoat {
