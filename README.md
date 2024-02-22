@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="https://github.com/DiegoVSouza/one_piece_pratica_uol/assets/104873917/8bf9464a-7741-4833-98bc-d2393de7ee55" />
+  <img src="https://github.com/DiegoVSouza/one_piece_pratica_uol/assets/104873917/1d85d927-2e82-4903-ac10-259c3dfd625e" />
 <br>
 <br>
 </h1>
