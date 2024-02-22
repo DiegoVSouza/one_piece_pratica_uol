@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  ![image](https://github.com/DiegoVSouza/one_piece_pratica_uol/assets/104873917/8bf9464a-7741-4833-98bc-d2393de7ee55)
+  <img src="https://github.com/DiegoVSouza/one_piece_pratica_uol/assets/104873917/8bf9464a-7741-4833-98bc-d2393de7ee55" />
 <br>
 <br>
 </h1>
